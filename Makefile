@@ -43,8 +43,8 @@ HELP_FILE:="$(MAKE_UTILS_DIR)/make_help_menu.txt"
 MAIN_EXAMPLE_FILE:="$(MAKE_SCRIPTS_DIR)/example_main.py"
 DELETE_FILE:="$(MAKE_SCRIPTS_DIR)/delete.py"
 MAIN_FILE:="$(SRC_DIR)/main.py"
-PYTHON_GITIGNORE_TEMPLATE:="$(MAKE_UTILS_DIR)/python_gitignore_template
-EXAMPLE_CONFIG:="$(MAKE_UTILS_DIR)/example_config.yaml
+PYTHON_GITIGNORE_TEMPLATE:="$(MAKE_UTILS_DIR)/python_gitignore_template"
+EXAMPLE_CONFIG:="$(MAKE_UTILS_DIR)/example_config.yaml"
 
 
 #######################
@@ -120,20 +120,18 @@ freeze:
 	# Freeze the dependencies and update the local requirements file.
 	@$(PIP) freeze > $(REQUIREMENTS_LOCAL)
 
-check:  
-	# Check code with linter and module import sorter.
+check:
+	# Check code with linter.
 	@$(FLAKE8) src
-	@$(ISORT) -rc -c src
 
-fix: check
+fix:
 	# Apply formatting to .py files and save.
 	@$(AUTOPEP8) --in-place --aggressive --recursive src
 	@$(ISORT) .
 
-clean: venv
-	# Cleans the directory of common clutter files and folders, deletes ./venv.
+clean:
+	# Cleans the directory of common clutter files and folders.
 	@rm -rf .cache
-	@rm -rf $(VENV_DIR)
 	@pyclean src
 
 delete: clean
