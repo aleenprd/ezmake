@@ -28,6 +28,7 @@ def main():
             os.system("sudo rm -rf ./README.md")
             os.system("sudo rm -rf .gitignore")
             os.system("sudo rm -rf .git")
+            os.system("sudo rm -rf venv")
             sys.exit()
     else:
         print("\nInvalid input; operation cancelled.\n")
