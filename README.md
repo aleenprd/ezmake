@@ -34,3 +34,9 @@ For make's true help menu, use '--help'.
 Besides needing make and Python installed on your machine, you should also clone
 the repository or copy these files into your desired location to immediately start
 setting up a project from stratch, with all the tools you need to develop.
+
+### FUTURE WORK
+
+- Automate usage of Pytest using example.
+- Think about including functionality related to Docker.
+- Find out how to add options to the make commands for more control.
