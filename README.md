@@ -49,6 +49,7 @@ This is what make will build as a standardised structure.
      |   |-- tests/
      |       |-- test_data/
      |       |-- fixtures/
+     |           |-- __init__.py
      |       |-- test_main.py
      |   |-- storage
      |       |-- <>.csv/<>.parquet/etc.
