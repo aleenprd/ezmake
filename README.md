@@ -35,6 +35,32 @@ Besides needing make and Python installed on your machine, you should also clone
 the repository or copy these files into your desired location to immediately start
 setting up a project from stratch, with all the tools you need to develop.
 
+### CODEBASE BUILD STRUCTURE
+This is what make will build as a standardised structure.
+
+    root/
+     |-- src/
+     |   |-- development_files/
+     |       |-- <>.ipynb       
+     |   |-- dependencies/
+     |       |-- __init__.py
+     |       |-- <>.py
+     |   |-- <main.py
+     |   |-- tests/
+     |       |-- test_data/
+     |       |-- fixtures/
+     |       |-- test_main.py
+     |   |-- storage
+     |       |-- <>.csv/<>.parquet/etc.
+     |   |-- requirements/
+     |       |-- requirements.txt
+     |   |-- configs/
+     |       |-- config.yaml
+     |   |-- documentation/
+     |       |-- Whitepaper.md
+     |-- README.md
+     |-- .gitignore
+
 ### FUTURE WORK
 
 - Automate usage of Pytest using example.
